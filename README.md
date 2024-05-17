@@ -53,7 +53,8 @@ Command: `sudo dnf install pamu2fcfg`
 - In the opened file, add the following line: `auth substack fido2-auth`
 - Comment out the following line by adding a `#` at the beginning: `auth substack password-auth`
 - Save and close `gdm-password` file
-- Open File: `nano /etc/pam.d/polkit-1`
+- Open File: `nano /etc/pam.d/polkit-1`. If not exist, copy default file from `/usr/lib/pam.d/polkit-1`.  
+  ```cp /usr/lib/pam.d/polkit-1 /etc/pam.d ```
 - In the opened file, add the following line: `auth substack fido2-auth`
 - Comment out the following line by adding a `#` at the beginning: `auth include system-auth`
 - Save and cose `polkit-1` file
